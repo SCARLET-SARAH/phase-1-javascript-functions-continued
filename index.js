@@ -1,34 +1,37 @@
-function razzle() {
-    console.log("You've been razzled!");
-  }
-  function razzle() {
-    console.log("You've been razzled!");
-  }
-  razzle();
-  //=> "You've been razzled!"
-  razzle(); //=> "You've been razzled!"
-function razzle() {
-  console.log("You've been razzled!");
+function saturdayFun(activity="roller-skate") {
+  return `This Saturday, I want to ${activity}!`
 }
-function razzle(lawyer = "Billy", target = "'em") {
-    console.log(`${lawyer} razzle-dazzles ${target}!`);
-  }
-  console.log("Yet more razzling");
-  razzle(); //=> Billy razzle-dazzles 'em!
-  razzle("Methuselah", "T'challah"); //=> Methuselah razzle-dazzles T'challah!
-  1 + 1; //=> 2
-  "Razzle " + "dazzle!"; //=> "Razzle dazzle!"
-  console.log("Yet more razzling");
-  
-  const fn = function () {
-    console.log("Yet more razzling");
-  }; //=> undefined
-  fn; //=> ƒ () { console.log("Yet more razzling") }
-  fn(); // "Yet more razzling"
 
-  function outer(greeting, msg = "It's a fine day to learn") {
-    const innerFunction = function (name, lang = "Python") {
-      return `${greeting}, ${name}! ${msg} ${lang}`;
-    };
-    return innerFunction;
+function mondayWork(activity="go to the office") {
+  return `This Monday, I will ${activity}.`
+}
+
+function wrapAdjective(string="*") {
+  return function(parameter="special") {
+      return `You are ${string}${parameter}${string}!`
   }
+}
+
+let Calculator = {
+  add: function(num1, num2) {
+      return num1 + num2
+  },
+  subtract: function(num1, num2) {
+      return num1 - num2
+  },
+  multiply: function(num1, num2) {
+      return num1 * num2
+  },
+  divide: function(num1, num2) {
+      return num1 / num2
+  }
+}
+
+function actionApplyer(startingInteger, arrayOfFunctions) {
+  let num = startingInteger
+
+  for (let i = 0; i < arrayOfFunctions.length; i++) {
+      num = arrayOfFunctions[i](num)
+      }
+  return num 
+    }
